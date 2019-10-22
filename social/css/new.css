@@ -1,0 +1,30 @@
+.button-mini {
+    height: auto;
+    width: auto;
+    margin: 3px;
+}
+
+.button-small {
+    height: 20px;
+    width: 90px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.button-medium {
+    height: 30px;
+    width: 100px;
+    /* margin-left: 15px;
+    margin-right: 15px; */
+
+}
+
+.button-large {
+    height: 40px;
+    width: 150px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+
+<?php if($friend['sender'] !== ?>
