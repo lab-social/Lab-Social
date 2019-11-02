@@ -1,35 +1,3 @@
-<?php
-include('includes/head2.php');
-include('includes/posts-query.php');
-?>
-<?php
-include('includes/headhtml.php');
-?>
-
-<body>
-    <header>
-        <nav class="topnav index-shadow">   
-            <a href="index.php" class="logonav"> Lab Social </a>
-            <ul class="nav-links">
-                <li><a class="social-btn" href="social.php">Social</a></li>
-                <li><a class="work-btn" href="work.php">Work</a></li>
-                <li><a class="school-btn" href="school.php">School</a></li>
-                <li><a class="family-btn" href="family.php">Family</a></li>
-            </ul>
-
-            <div class="menu-flexrb">
-                <form action="" method="post">
-                    <button type="submit" class="button-medium" name="logout-sub">Logout</button>
-                </form>
-                <a href="about-help.php"><button type="submit" class="button-medium" name="">About/Help</button></a>
-            <div>
-        </nav>
-    </header>
-  
-    <div class="index-bar index-shadow nav-flex">
-        <p><div class="menu-flexl">logged in<a href="people.php"><button type="submit" class="button-small" name="">See People</button></a><a href="friends.php"><button type="submit" class="button-small" name="">See Friends</button></a></div><div class="menu-flexr"><form><input type="text" placeholder="Search..."><button class="button-mini">search</button></form><a href="profile.php"><button type="submit" class="button-small" name="">Profile</button></a><a href="#"><button type="submit" class="button-small" name="">Settings</button></a></div></p>
-    </div>
-
     <div class="page-grid">
 
         <div class="comment-column">
@@ -100,5 +68,3 @@ include('includes/headhtml.php');
         </div> <!-- comment column --> 
 
     </div> <!-- page grid -->
-
-<?php include('includes/footer.php'); ?>
