@@ -57,6 +57,13 @@ CREATE TABLE `friend_accept1` (
   `publish_date` datetime DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `friend_accept1`
+--
+
+INSERT INTO `friend_accept1` (`id`, `user1_id`, `user2_id`, `request_id`, `sender`, `accept`, `work`, `social`, `school`, `family`, `publish_date`) VALUES
+(21, 18, 38, 115, 'isaac', 1, 0, 1, 0, 0, '2019-10-16 22:49:38'),
+(22, 18, 1, 116, 'isaac', 1, 1, 1, 1, 1, '2019-10-16 22:54:40');
 
 -- --------------------------------------------------------
 
@@ -78,6 +85,13 @@ CREATE TABLE `friend_accept2` (
   `publish_date` datetime DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `friend_accept2`
+--
+
+INSERT INTO `friend_accept2` (`id`, `user1_id`, `user2_id`, `request_id`, `sender`, `accept`, `work`, `social`, `school`, `family`, `publish_date`) VALUES
+(19, 38, 18, 115, 'isaac', 1, 0, 1, 0, 0, '2019-10-16 22:49:38'),
+(20, 1, 18, 116, 'isaac', 1, 1, 1, 1, 1, '2019-10-16 22:54:41');
 
 -- --------------------------------------------------------
 
@@ -95,9 +109,15 @@ CREATE TABLE `friend_request` (
   `publish_date` datetime DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `friend_request`
+--
 
+INSERT INTO `friend_request` (`id`, `user1_id`, `user2_id`, `req_sender`, `body`, `open_req`, `publish_date`) VALUES
+(115, 18, 38, 'isaac', 'ham and beans', 0, '2019-10-16 22:49:38'),
+(116, 18, 1, 'isaac', 'ham and beans', 0, '2019-10-16 22:54:40');
 
-
+-- --------------------------------------------------------
 
 --
 -- Table structure for table `posts`
@@ -113,8 +133,15 @@ CREATE TABLE `posts` (
   `publish_date` datetime DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `posts`
+--
 
-
+INSERT INTO `posts` (`id`, `user_id`, `domain_num`, `author`, `title`, `body`, `publish_date`) VALUES
+(54, 18, 2, 'isaac', 'Hello, Welcome to Lab Social', 'Lab Social is a new social media platform designed to organize interactions in undestandable and meaningful ways. ', '2019-10-16 22:46:58'),
+(55, 18, 1, 'isaac', 'Hello, Welcome to Lab Social', 'Lab Social is a new social media platform designed to organize interactions in undestandable and meaningful ways', '2019-10-16 22:53:11'),
+(56, 18, 3, 'isaac', 'Hello, Welcome to Lab Social', 'Lab Social is a new social media platform designed to organize interactions in undestandable and meaningful ways. ...', '2019-10-16 22:59:12'),
+(57, 18, 4, 'isaac', 'Hello, Welcome to Lab Social', 'Lab Social is a new social media platform designed to organize interactions in undestandable and meaningful ways. ...', '2019-10-16 22:59:24');
 
 -- --------------------------------------------------------
 
@@ -133,6 +160,8 @@ CREATE TABLE `profile_img` (
 -- Dumping data for table `profile_img`
 --
 
+INSERT INTO `profile_img` (`id`, `user_id`, `status`, `publish_date`) VALUES
+(5, 18, 1, '2019-10-13 11:27:58');
 
 -- --------------------------------------------------------
 
@@ -156,7 +185,14 @@ CREATE TABLE `users` (
   `pic_status` int(3) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `users`
+--
 
+INSERT INTO `users` (`id`, `firstname`, `lastname`, `city`, `state`, `about`, `email`, `phone`, `username`, `password`, `is_admin`, `register_date`, `pic_status`) VALUES
+(1, 'Mister', 'Testy Calls', 'Saltytown', 'North Illinoisville', '  content    content    content    content    content    content    content    content    content    content    content    content    content    content    content    content    content    content    content    content    content    content    content    content    content    content    content    content    content    content    content    but\r\n why', 'test@test.com', '1234567890', 'test', '$2y$10$dn/4Fiy6yollDPALjxUpnOcznCHVw13MUxzHY1E7E84Sfir.XP1FS', NULL, NULL, 0),
+(18, 'Isaac', 'Moore', 'Springfield', 'Illinois', 'What is this shit? How many chumps are going to buy chump-fix? Probably very few chumps will buy chump-fix.\r\n', 'isaac@isaac.com', '123 456 7890', 'isaac', '$2y$10$NTOwi02Lhfj5UOX6n0zAFOVhHxSzJ6hTDGRizdJfBTBzfLExC0i1y', NULL, NULL, 1),
+(38, 'toots', 'otto', 'tottyville', 'Illinois', 'let me tell \'yalls some tale i seen on a telEVidEo   let me tell \'yalls some tale i seen on a telEVidEo   let me tell \'yalls some tale i seen on a telEVidEo   let me tell \'yalls some tale i seen on a telEVidEo   let me tell \'yalls some tale i seen on a telEVidEo   let me tell \'yalet me tell \'yalls some tale i seen on a telEVidEo   let me tell \'yalls some tale i seen on a telEVidEo   let me tell \'yalls some tale i seen on a telEVidEo   let me tell \'yalls some tale i seen on a telEVidEo   lls some tale i seen on a telEVidEo   let me tell \'yalls some tale i seen on a telEVidEo   ', 'not@friend.com', '123 123 1234', 'notfriend', '$2y$10$TkfT/uhKqjRR4rmLtX9i8.WIlXRJiVAsPRlQIoH4OGVkh7lt17wUu', NULL, NULL, 1);
 
 --
 -- Indexes for dumped tables

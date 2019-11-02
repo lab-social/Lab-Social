@@ -1,8 +1,12 @@
 <?php
+
+include ('config/db.php');
+
 	// get ID
 	$id = mysqli_real_escape_string($conn, $_GET['id']);
+    
+    	// var_dump($id);
 
-	
 	// Create Query
 	$query = 'SELECT * FROM posts WHERE id = '.$id;
 
@@ -58,10 +62,12 @@ if(isset($_POST['sub-post-edit'])) {
     $msg = 'comment posted';
     $msgClass = 'reg-success';
     $msgButton = 1;
-
-        }
+	// header("Location: postx.php?id=".$id);
+	header("Location: post.php?id=".$id);
+}
 	}
-	header("refresh: 0");
+	// header("refresh: 0");
+	// header("Location: postx.php?id=".$id);
 }
 	// Close Connection
 	mysqli_close($conn);

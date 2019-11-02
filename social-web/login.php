@@ -1,5 +1,5 @@
 <?php   include('includes/head.php');
-        include('includes/login-verify.php');
+        // include('includes/login-verify.php');
 ?>
 
 

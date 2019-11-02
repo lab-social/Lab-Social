@@ -32,8 +32,6 @@
 
                             <a class="button" href="user.php?id=<?php echo $request['user1_id']; ?>"><button type="submit" class="button-medium" name="">See Profile</button></a>
 
-                            <!-- <a target="blank" class="button" href="user.php?id=<?php # echo $request['user1_id']; ?>"><button type="submit" class="button-medium" name="">Send Message</button></a> -->
-
                             <form class="reg-form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                                 <input type="hidden" name="req-id" value="<?php echo $request['id']; ?>">
                                 <input type="hidden" name="user1-id" value="<?php echo $request['user1_id']; ?>">

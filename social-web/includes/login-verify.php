@@ -1,15 +1,15 @@
 <?php
+if(isset($_POST['submit2'])) {
+    include ('config/db.php');
 
     $msg = '';
     $msgClass = '';
     $msgButton = 0;
 
-if (isset($_POST['submit2'])) {
-
     $lusername = $_POST['login-name'];
     $lpassword = $_POST['login-pass'];
 
-    if (empty($lusername) || empty($lpassword)) {
+    if(empty($lusername) || empty($lpassword)) {
         $msg = 'please fill in all fields';
         $msgClass = 'reg-dang';
         $msgButton = 2;
@@ -21,12 +21,11 @@ if (isset($_POST['submit2'])) {
             $msgClass = 'reg-dang';
             $msgButton = 2;
         } else {
-
             mysqli_stmt_bind_param($stmt, "s", $lusername);
             mysqli_stmt_execute($stmt);
             $result = mysqli_stmt_get_result($stmt);
 
-            if ($row = mysqli_fetch_assoc($result)) {
+            if($row = mysqli_fetch_assoc($result)) {
                 $passcheck = password_verify($lpassword, $row['password']);
                 if ($passcheck == false) {
                     $msg = 'wrong password';
@@ -56,9 +55,4 @@ if (isset($_POST['submit2'])) {
         }
     }
 
-}
-
-// else {
-//     header("Location: index.php");
-//     exit();
-// }
+} ?>

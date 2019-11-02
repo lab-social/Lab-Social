@@ -43,7 +43,6 @@
 
     </div>
 
-
     <?php foreach($comments as $comment) : ?>
 
         <div class="site-content4 background1">
@@ -51,7 +50,6 @@
             <div class="text-center">
 
                 <span class="post-date"><?php $pdate = date_create($comment['publish_date']); echo date_format($pdate, 'm-d-y') ?> by </span>
-
 
                 <span class="post-author"><?php echo $comment['author']; ?></span>
 
@@ -77,6 +75,4 @@
 
             </form>
         </div>
-</div>        
-
-<?php include('includes/footer.php'); ?>
+</div>

@@ -1,8 +1,9 @@
 <?php 
 
+// include ('config/db.php');
+
 	$user2id = $_SESSION['userId'];
 	
-
 	$query = 'SELECT
 		posts.id,
 		posts.domain_num,
@@ -436,6 +437,9 @@
 	mysqli_free_result($resultd);
 	mysqli_free_result($resulte);
 	// mysqli_free_result($resultImg);
+
+
+
 	
 	if(isset($_POST['sub-post'])){
         // Get form data
@@ -472,10 +476,8 @@
 
 			header("refresh: 0");
 		} 
-
 	}
 
-	
 	if(isset($_POST['submit-mail'])) {
     $email = htmlspecialchars($_POST['update-email']);
     if(filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
@@ -490,10 +492,4 @@
                     mysqli_stmt_execute($stmt);
                 }
             }
-
-}
-	
-	// Close Connection
-    mysqli_close($conn);
-    
-    ?>
+} ?>

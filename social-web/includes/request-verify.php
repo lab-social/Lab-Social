@@ -1,5 +1,7 @@
 <?php
 
+include ('config/db.php');
+
 // include('includes/post-query.php');
 
     $msg = '';

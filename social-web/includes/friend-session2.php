@@ -1,4 +1,7 @@
 <?php
+
+include ('config/db.php');
+
 	$user2id = $_SESSION['userId'];
 
 	$query5 = 'SELECT * FROM friend_request WHERE user2_id = '.$user2id.' AND open_req = 1';
@@ -59,7 +62,8 @@
 					AND user2_id = {$user1_id}";
 
 		if(mysqli_query($conn, $query6) && mysqli_query($conn, $query6a) && mysqli_query($conn, $query6b)){
-			header('Location: '.ROOT_URL.'friends.php');
+			header('Location: friends.php');
+			// header('Location: '.ROOT_URL.'friends.php');
 		} else {
 			echo 'ERROR: '. mysqli_error($conn);
 		}
@@ -89,7 +93,9 @@
 					AND user2_id = {$user1_id}";
 
 		if(mysqli_query($conn, $query61) && mysqli_query($conn, $query6a1) && mysqli_query($conn, $query6b1)){
-			header('Location: '.ROOT_URL.'friends.php');
+			header('Location: friends.php');
+
+			// header('Location: '.ROOT_URL.'friends.php');
 			// header("refresh: 0");
 
 		} else {

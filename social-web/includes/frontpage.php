@@ -3,7 +3,8 @@
          <div class="generic-content3 post-title text-cener">Lab Social</div>
          <br>
          <div class="site-content5 background1">
-            Register Above
+            Lab Social is currently down for maintenance. Thanks for stopping by.
+			
          </div>
          <div class="site-content5 background1">
             <p class="text-left-pad"> Lab Social is a new approach to social media. </p>
@@ -28,7 +29,7 @@
                </form>
          </div>
 		 
-         <div class="site-content5 background1 text-center">
+         <!-- <div class="site-content5 background1 text-center">
 
             <p> Click to donate to Lab Social</p>
             <br>
@@ -40,6 +41,6 @@
             <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
             </form>
 
-         </div>
+         </div> -->
          
    </div>

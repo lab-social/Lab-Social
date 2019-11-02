@@ -6,6 +6,9 @@
 
 if(isset($_POST['submit'])) {
 
+    // require ('config/db.php');
+
+
     $uname1 = htmlspecialchars($_POST['username1']);
     $uname2 = htmlspecialchars($_POST['username2']);
     $uemail = htmlspecialchars($_POST['email']);

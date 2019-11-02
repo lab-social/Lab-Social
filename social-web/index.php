@@ -1,5 +1,4 @@
 <?php include('includes/head.php'); ?>
-
 <!-- body content here -->
     <?php if(isset($_SESSION['userId'])) {
         echo '<div class="index-bar index-shadow nav-flex">';
@@ -8,7 +7,6 @@
         include('includes/index-content.php');
     } else {
         include('includes/frontpage.php');
-
     } ?>
 
-<?php include('includes/footer.php') ?>
+<?php include('includes/footer.php'); ?>

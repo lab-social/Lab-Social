@@ -1,5 +1,7 @@
 <?php
 
+include ('config/db.php');
+
 $profile_id = $_SESSION['userId'];
 
 

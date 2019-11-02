@@ -1,5 +1,6 @@
 <?php 
     include('friend-session.php');
+    // include('comment-query.php');
 ?>
 <div class="site-content3 background2 index-shadow">
         <div class="site-content5 background1">

@@ -1,5 +1,6 @@
 <?php
 
+include ('config/db.php');
 
 $bquery1 = 'SELECT id, username, firstname, city, state, lastname, about, pic_status FROM users WHERE id = '.$_SESSION['userId'];
 

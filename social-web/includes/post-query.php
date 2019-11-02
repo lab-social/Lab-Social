@@ -1,4 +1,7 @@
 <?php
+
+include ('config/db.php');
+
 	// get ID
 	$id = mysqli_real_escape_string($conn, $_GET['id']);
 	$id2 = mysqli_real_escape_string($conn, $_GET['id']);
@@ -34,6 +37,12 @@
     $author = $_SESSION['userName'];
     $userid1 = $_SESSION['userId'];
     $postid1 = $_SESSION['pst_cmt'];
+
+    // $userid2 = $_SESSION['requestId'];
+    // $req_sender = $_SESSION['userName'];
+    // $userid2 = $user['id'];
+    // $userid2 = htmlspecialchars($_POST['req-user1']);
+
 
 
 if(isset($_POST['sub-comment'])) {

@@ -13,6 +13,7 @@
 
 		if(mysqli_query($conn, $qstatement1)){
 			header('Location: '.ROOT_URL.'');
+			// header('Location: index.php');
 		} else {
 			echo 'ERROR: '. mysqli_error($conn);
 		}
