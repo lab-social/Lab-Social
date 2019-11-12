@@ -1,10 +1,9 @@
-<?php include('posts-query.php'); ?>
-
     <div class="page-grid">
 
         <div class="comment-column">
 
             <?php foreach($posts as $post) : ?>
+
                 <div <?php if($post['domain_num'] == 1){
                     echo 'class="grid-content2 work-shadow"';
                 } elseif($post['domain_num'] == 2){
@@ -46,63 +45,38 @@
 
         <div class="comment-column">
 
-                <div class="grid-content2 grid-shadow1">
-                    <div id="edit-title">alerts (under construction) </div>
-                </div>                
+            <div class="grid-content2 grid-shadow1">
+                <div id="edit-title">alerts (under construction) </div>
+            </div>                
 
-                <div class="grid-content2 grid-shadow1">
-                    <div id="edit-title">messaging (under construction)</div>
-                </div>
+            <div class="grid-content2 grid-shadow1">
+                <div id="edit-title">messaging (under construction)</div>
+            </div>
 
-                <div class="grid-content2 index-shadow">
-                    
-                    <div class="post-title text-center" id="edit-title">Add Post</div>
+            <div class="grid-content2 index-shadow">
+                
+                <div class="post-title text-center" id="edit-title">Add Post</div>
 
-                    <form method="POST" action="<?php $_SERVER['PHP_SELF']; ?>">
-                        <label for="title">Title</label>
-                        <input type="text" name="title" class="field-content1 background2">
-                    
-                        <label for="body">Body</label>
-                        <textarea name="body" class="field-content2 background2"></textarea>
+                <form method="POST" action="<?php $_SERVER['PHP_SELF']; ?>">
+                    <label for="title">Title</label>
+                    <input type="text" name="title" class="field-content1 background2">
+                
+                    <label for="body">Body</label>
+                    <textarea name="body" class="field-content2 background2"></textarea>
 
-                        <label for="domain">domain</label>
-                        <select class="" name="domain" id="">
-                            <option>social</option>
-                            <option>work</option>
-                            <option>school</option>
-                            <option>family</option>
-                        </select>
+                    <label for="domain">domain</label>
+                    <select class="" name="domain" id="">
+                        <option>social</option>
+                        <option>work</option>
+                        <option>school</option>
+                        <option>family</option>
+                    </select>
 
-                        <button type="submit" name="sub-post" class="button-mini">Submit</button>
-                    </form>
-
-                </div> <!-- grid content -->
-
-                <!-- <div class="grid-content2 grid-shadow1 menu-flexrb2">
-                <p> Enter email to recieve updates </p>
-                <form action=" " method="post">
-                <input type="email" class="nav-field" name="update-email" placeholder="email">
-                    <button type="submit" class="navbutton" name="submit2">get updates</button>
+                    <button type="submit" name="sub-post" class="button-mini">Submit</button>
                 </form>
-                </div> -->
 
-                <!-- <div class="grid-content2 grid-shadow1  menu-flexrb2">
-                <div>
-                    <p> Please Consider a Donation </p>
-                    <p> securely through PayPal </p>
-                </div>
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                    <input type="hidden" name="cmd" value="_donations" />
-                    <input type="hidden" name="business" value="HYWZED56YYSMW" />
-                    <input type="hidden" name="currency_code" value="USD" />
-                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-                    <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-                </form>
-                </div> -->
+            </div> <!-- grid content -->
 
         </div> <!-- comment column --> 
 
-
-    </div> <!--page-grid -->
-
-
+    </div> <!-- page grid -->

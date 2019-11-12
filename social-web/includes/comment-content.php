@@ -1,9 +1,3 @@
-<?php
-        include('includes/comment-verify.php');
-?>
-
-<!-- content here -->
-
 <main class="site-content2">
 
     <!-- alert success or fail and continue button -->

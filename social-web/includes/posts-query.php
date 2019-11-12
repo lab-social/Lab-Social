@@ -210,7 +210,21 @@
 		users.username
 		FROM posts
 		INNER JOIN users ON users.id = posts.user_id
-		INNER JOIN friend_accept1 ON users.id = friend_accept1.user1_id WHERE friend_accept1.user2_id = '.$user2id.' AND friend_accept1.accept = 1 AND posts.domain_num = 4 AND friend_accept1.family = 1';
+		INNER JOIN friend_accept1 ON users.id = friend_accept1.user1_id WHERE friend_accept1.user2_id = '.$user2id.' AND friend_accept1.accept = 1 AND posts.domain_num = 4 AND friend_accept1.family = 1
+		UNION
+			SELECT
+			posts.id,
+			posts.domain_num,
+			posts.author,
+			posts.body,
+			posts.title,
+			posts.publish_date,
+			users.id AS userID,
+			users.username
+			FROM posts
+			INNER JOIN users ON users.id = posts.user_id WHERE posts.user_id = '.$user2id.'
+			ORDER BY publish_date
+			LIMIT 50';
 
 	
 	$query2 = 'SELECT * FROM comments ORDER BY publish_date DESC';
@@ -261,7 +275,20 @@
 		users.username
 		FROM posts
 		INNER JOIN users ON users.id = posts.user_id
-		INNER JOIN friend_accept1 ON users.id = friend_accept1.user1_id WHERE friend_accept1.user2_id = '.$user2id.' AND friend_accept1.accept = 1 AND posts.domain_num = 1 AND friend_accept1.work = 1';
+		INNER JOIN friend_accept1 ON users.id = friend_accept1.user1_id WHERE friend_accept1.user2_id = '.$user2id.' AND friend_accept1.accept = 1 AND posts.domain_num = 1 AND friend_accept1.work = 1
+		UNION
+			SELECT
+			posts.id,
+			posts.author,
+			posts.body,
+			posts.title,
+			posts.publish_date,
+			users.id AS userID,
+			users.username
+			FROM posts
+			INNER JOIN users ON users.id = posts.user_id WHERE users.id = '.$user2id.' AND posts.domain_num = 1
+			ORDER BY publish_date
+			LIMIT 50';
 
 	$queryb = 'SELECT
 		posts.id,
@@ -309,7 +336,20 @@
 		users.username
 		FROM posts
 		INNER JOIN users ON users.id = posts.user_id
-		INNER JOIN friend_accept1 ON users.id = friend_accept1.user1_id WHERE friend_accept1.user2_id = '.$user2id.' AND friend_accept1.accept = 1 AND posts.domain_num = 2 AND friend_accept1.social = 1';
+		INNER JOIN friend_accept1 ON users.id = friend_accept1.user1_id WHERE friend_accept1.user2_id = '.$user2id.' AND friend_accept1.accept = 1 AND posts.domain_num = 2 AND friend_accept1.social = 1
+		UNION
+			SELECT
+			posts.id,
+			posts.author,
+			posts.body,
+			posts.title,
+			posts.publish_date,
+			users.id AS userID,
+			users.username
+			FROM posts
+			INNER JOIN users ON users.id = posts.user_id WHERE users.id = '.$user2id.' AND posts.domain_num = 2
+			ORDER BY publish_date
+			LIMIT 50';
 
 	$queryc = 'SELECT
 		posts.id,
@@ -357,7 +397,20 @@
 		users.username
 		FROM posts
 		INNER JOIN users ON users.id = posts.user_id
-		INNER JOIN friend_accept1 ON users.id = friend_accept1.user1_id WHERE friend_accept1.user2_id = '.$user2id.' AND friend_accept1.accept = 1 AND posts.domain_num = 3 AND friend_accept1.school = 1';
+		INNER JOIN friend_accept1 ON users.id = friend_accept1.user1_id WHERE friend_accept1.user2_id = '.$user2id.' AND friend_accept1.accept = 1 AND posts.domain_num = 3 AND friend_accept1.school = 1
+		UNION
+			SELECT
+			posts.id,
+			posts.author,
+			posts.body,
+			posts.title,
+			posts.publish_date,
+			users.id AS userID,
+			users.username
+			FROM posts
+			INNER JOIN users ON users.id = posts.user_id WHERE users.id = '.$user2id.' AND posts.domain_num = 3
+			ORDER BY publish_date
+			LIMIT 50';
 
 	$queryd = 'SELECT
 		posts.id,
@@ -405,7 +458,20 @@
 		users.username
 		FROM posts
 		INNER JOIN users ON users.id = posts.user_id
-		INNER JOIN friend_accept1 ON users.id = friend_accept1.user1_id WHERE friend_accept1.user2_id = '.$user2id.' AND friend_accept1.accept = 1 AND posts.domain_num = 4 AND friend_accept1.family = 1';
+		INNER JOIN friend_accept1 ON users.id = friend_accept1.user1_id WHERE friend_accept1.user2_id = '.$user2id.' AND friend_accept1.accept = 1 AND posts.domain_num = 4 AND friend_accept1.family = 1
+		UNION
+			SELECT
+			posts.id,
+			posts.author,
+			posts.body,
+			posts.title,
+			posts.publish_date,
+			users.id AS userID,
+			users.username
+			FROM posts
+			INNER JOIN users ON users.id = posts.user_id WHERE users.id = '.$user2id.' AND posts.domain_num = 4
+			ORDER BY publish_date
+			LIMIT 50';
 
 	$querye = 'SELECT * FROM users WHERE users.id != '.$user2id.' AND (NOT EXISTS (SELECT * FROM friend_accept1 WHERE (users.id = friend_accept1.user1_id AND friend_accept1.user2_id = '.$user2id.' AND friend_accept1.accept = 1) OR (users.id = friend_accept1.user2_id AND friend_accept1.user1_id = '.$user2id.' AND friend_accept1.accept = 1)))';
 

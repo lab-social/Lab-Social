@@ -4,7 +4,7 @@
                     <input type="password" class="nav-field" name="login-pass" placeholder="Password">
                     <button type="submit" class="button-small" name="submit2">Login</button>
                 </form>
-                <!-- <a href="register.php" class="abuffer1">Register</a> -->
+                <a href="register.php" class="abuffer1">Register</a>
             </div>
         </nav>
     </header>

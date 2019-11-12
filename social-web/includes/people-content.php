@@ -1,7 +1,3 @@
-<?php 
-    include('posts-query.php');
-?>
-
     <div class="page-grid">
 
             <?php foreach($users as $user) : 

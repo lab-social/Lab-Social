@@ -6,5 +6,50 @@ function check_login(){
          header('Location: ' . BASE_URL . '/index.php'); 
     }
 
-
 }
+
+target="blank"    is to open an <a target="blank" href="page.php"> in a new tab
+
+new header files
+
+    action-bar
+    action-bar-work
+    action-bar-social
+    action-bar-school
+    action-bar-family
+
+    posts-workb
+    posts-socialb
+    posts-schoolb
+    posts-familyb
+    about-help-contentb
+    comment-contentb
+    friends-contentb
+    people-contentb
+    post-contentb
+    post-edit-contentb
+    profile-contentb
+    profile-edit-content
+    register-contentb
+    request-contentb
+    user-contentb
+    login-contentb
+
+    index
+    about-helpb
+    commentb
+    friendsb
+    peopleb
+    postb
+    post-editb
+    profileb
+    profile-edit
+    registerb
+    requestb
+    user
+    loginb
+    
+    workb
+    socialb
+    schoolb
+    familyb

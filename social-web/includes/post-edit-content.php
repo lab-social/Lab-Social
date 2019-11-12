@@ -1,7 +1,3 @@
-<?php 
-        include('post-edit-query.php');
-?>
-
 <div <?php if($post['domain_num'] == 1){
                     echo 'class="site-content3 background2 work-shadow"';
                 } elseif($post['domain_num'] == 2){
@@ -34,6 +30,4 @@
 
     </div>
 
-
-   
-</div>        
+</div>

@@ -1,8 +1,3 @@
-<?php 
-    include('posts-query.php');
-    // include('comment-query.php');
-?>
-
     <div class="page-grid">
 
         <div class="comment-column">

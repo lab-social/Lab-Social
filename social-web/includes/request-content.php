@@ -1,10 +1,3 @@
-<?php
-        include('includes/request-verify.php');
-?>
-
-<!-- content here -->
-<!-- <div class="spacer1"></div> -->
-
 <main class="site-content3 background2 index-shadow">
 
     <!-- alert success or fail and continue button -->

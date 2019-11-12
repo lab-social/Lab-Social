@@ -1,7 +1,9 @@
 <?php
-define('DB_HOST', '');
-define('DB_USER', '');
-define('DB_PASS', '');
-define('DB_NAME', '');
-// define('ROOT_URL', '/lab-social.xyz');
+	
+	define('DB_HOST', 'mysql.lab-social.xyz');
+	define('DB_USER', 'deep_diver');
+	define('DB_PASS', 'HardCore69!');
+	define('DB_NAME', 'social_lab'); 
+	define('ROOT_URL', '/');
+
 ?>

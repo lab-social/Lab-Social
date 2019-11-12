@@ -1,7 +1,3 @@
-<?php
-        include('profile-edit-query.php');
-?>
-
 <!-- registration content here -->
 <main class="site-content3 background1 index-shadow">
 
@@ -59,7 +55,7 @@
         <input type="text" class="field-content1" name="username2" placeholder="New Username">
         <input type="text" class="field-content1" name="username3" placeholder="Confirm Username">
         <div>
-            <button type="submit" class="button-medium" id="" name="username-update">Update Profile</button>
+            <button type="submit" class="button-medium" id="" name="username-update">Change Username</button>
         </div>
     </form>
 </div>

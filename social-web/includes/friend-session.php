@@ -1,6 +1,5 @@
 <?php
-
-include ('config/db.php');
+// include ('config/db.php');
 
 	$id4 = mysqli_real_escape_string($conn, $_GET['id']);
 

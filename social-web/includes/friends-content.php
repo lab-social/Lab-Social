@@ -1,8 +1,4 @@
-<?php 
-    include('friend-session2.php');
-?>
-
-    <div class="page-grid">
+<div class="page-grid">
 
         <div class="comment-column">
 
@@ -38,7 +34,6 @@
                                 <input type="hidden" name="user2-id" value="<?php echo $request['user2_id']; ?>">
                                 <button type="submit" class="button-medium" name="dec-req">Decline</button>
                             </form>
-
 
                         </div>
                     </div>
@@ -86,6 +81,8 @@
 
                         <a target="blank" class="button" href="user.php?id=<?php echo $friend['id']; ?>"><button type="submit" class="button-medium" name="">See Profile</button></a>
 
+                        <a class="button" href="messageb.php?id=<?php echo $friend['id']; ?>&username=<?php echo $friend['username']; ?>"><button type="submit" class="button-medium" name="">Message</button></a>
+
                     </div>
 
                 </div>
@@ -93,6 +90,4 @@
 
         </div> <!-- comment column --> 
 
-
     </div> <!--page-grid -->
-
